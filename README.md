@@ -16,7 +16,11 @@ The sections below act as the reference documentation for the SimpleFiles langua
 
 Once you have the text file written in SimpleFilesDSL, you can replace the file path at `src\index\Main.java` at line 22 with your own script file location. Alternatively, you can use the user interface by running main from `\src\ui\UI.java`. 
 
+
+
 The UI has four buttons on top that generates template code for the action, run button to execute the script and bottom window displays if the instruction is execute correction. Since our UI was not in original plan and is coded up with very little time before project ends, error messages are not integrated to here, hence the display may not show correct error messages. Please refer to the console output for accurate error from executing the scripts.
+
+![UI](https://github.com/iLnitsuJ/SimpleFilesDSL/assets/77997487/1ea11db1-3ecb-423d-aae6-154e4f6f294a)
 
 ### 2.0.1 Atomic Actions
 
