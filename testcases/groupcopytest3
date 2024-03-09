@@ -1,0 +1,13 @@
+BEGIN
+
+INST group_files -> :group
+--> group_target = "testRefDirectory"
+--> path = "testoutputs/groupcopytest3"
+--> size = "100"
+--> comparator = "GT"
+--> mode = "copy";
+
+
+EXEC_INST group_files;
+
+END

@@ -1,0 +1,12 @@
+BEGIN
+
+INST group_files -> :group
+--> group_target = "testRefDirectory"
+--> path = "testoutputs/groupcopytest6"
+--> modified_date = "BETWEEN 2023/12/14-12:00 2023/12/15-12:00"
+--> mode = "copy";
+
+
+EXEC_INST group_files;
+
+END

@@ -1,0 +1,23 @@
+BEGIN
+
+INST create_some_folders_inst -> :create_folder
+--> path = "testoutputs/chainmultimovetest/start"
+--> name = "hello_folder_${ITERATOR}"
+--> count = "5";
+
+
+INST group_files1 -> :group
+--> group_target = "create_some_folders_inst"
+--> path = "testoutputs/chainmultimovetest/second"
+--> mode = "move";
+
+INST group_files2 -> :group
+--> group_target = "group_files1"
+--> path = "testoutputs/chainmultimovetest/end"
+--> mode = "move";
+
+EXEC_INST create_some_folders_inst;
+EXEC_INST group_files1;
+EXEC_INST group_files2;
+
+END

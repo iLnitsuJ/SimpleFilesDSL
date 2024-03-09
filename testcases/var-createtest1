@@ -1,0 +1,14 @@
+BEGIN
+
+INST create_some_folders_inst -> :create_folder
+--> path = "${path}"
+--> name = "${name}"
+--> count = "${count}";
+
+VAR path = "testoutputs/var-createtest1";
+VAR name = "hello_folder_${ITERATOR}";
+VAR count = "5";
+
+EXEC_INST create_some_folders_inst;
+
+END

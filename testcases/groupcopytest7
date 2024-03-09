@@ -1,0 +1,12 @@
+BEGIN
+
+INST group_files -> :group
+--> group_target = "testRefDirectory"
+--> path = "testoutputs/groupcopytest7"
+--> extension = "png"
+--> mode = "copy";
+
+
+EXEC_INST group_files;
+
+END

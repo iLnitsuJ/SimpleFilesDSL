@@ -1,0 +1,10 @@
+BEGIN
+
+INST create_some_folders_inst -> :create_folder
+--> path = "testoutputs/createtest2"
+--> name = "hello_folder_18"
+--> count = "1";
+
+EXEC_INST create_some_folders_inst;
+
+END

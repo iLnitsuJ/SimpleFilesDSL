@@ -1,0 +1,16 @@
+BEGIN
+
+INST create_some_files_inst -> :create_file
+--> path = "testoutputs/chainrenametest"
+--> name = "hello_file_${ITERATOR}"
+--> count = "5";
+
+INST rename -> :rename
+--> path = "create_some_files_inst"
+--> recursive = "true"
+--> mode = "upper_case";
+
+EXEC_INST create_some_files_inst;
+EXEC_INST rename;
+
+END

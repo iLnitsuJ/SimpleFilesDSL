@@ -1,0 +1,18 @@
+BEGIN
+
+INST group_files1 -> :group
+--> group_target = "testRefDirectory"
+--> path = "testoutputs/groupmovetest1-a"
+--> mode = "copy";
+
+INST group_files2 -> :group
+--> group_target = "testoutputs/groupmovetest1-a"
+--> path = "testoutputs/groupmovetest1-b"
+--> extension = "png"
+--> mode = "move";
+
+
+EXEC_INST group_files1;
+EXEC_INST group_files2;
+
+END

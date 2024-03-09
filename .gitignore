@@ -1,0 +1,14 @@
+.vscode
+
+/out
+/gen
+.DS_Store
+
+/test/evaluator/Examples
+.idea/workspace.xml
+Group1Project1.iml
+testoutputs
+personal
+
+.idea
+

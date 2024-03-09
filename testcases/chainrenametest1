@@ -1,0 +1,16 @@
+BEGIN
+
+INST create_some_folder_inst -> :create_folder
+--> path = "testoutputs/chainrenametest1"
+--> name = "hello_folder_${ITERATOR}"
+--> count = "5";
+
+INST rename -> :rename
+--> path = "create_some_folder_inst"
+--> recursive = "true"
+--> mode = "upper_case";
+
+EXEC_INST create_some_folder_inst;
+EXEC_INST rename;
+
+END

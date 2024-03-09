@@ -1,0 +1,8 @@
+BEGIN
+
+INST create_some_files_inst -> :create_file
+--> path = "testoutputs/createtest6"
+--> name = "hello_file_${ITERATOR:10:-5}"
+--> count = "6";
+EXEC_INST create_some_files_inst;
+END

@@ -1,0 +1,19 @@
+BEGIN
+
+INST group_files -> :group
+--> group_target = "testRefDirectory"
+--> path = "testoutputs/renametest2"
+--> mode = "copy";
+
+INST rename -> :rename
+--> path = "testoutputs/renametest2"
+--> recursive = "true"
+--> extension = "png"
+--> recursive = "false"
+--> mode = "upper_case";
+
+
+EXEC_INST group_files;
+EXEC_INST rename;
+
+END

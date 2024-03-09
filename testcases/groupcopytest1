@@ -1,0 +1,12 @@
+BEGIN
+
+INST group_files -> :group
+--> group_target = "testRefDirectory"
+--> path = "testoutputs/groupcopytest1"
+--> contains = "fruit"
+--> mode = "copy";
+
+
+EXEC_INST group_files;
+
+END

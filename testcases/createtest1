@@ -1,0 +1,10 @@
+BEGIN
+
+INST create_some_folders_inst -> :create_folder
+--> path = "testoutputs/createtest1"
+--> name = "hello_folder_${ITERATOR}"
+--> count = "5";
+
+EXEC_INST create_some_folders_inst;
+
+END

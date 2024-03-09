@@ -1,0 +1,28 @@
+BEGIN
+
+    COND C_TargetPDF -> :condition
+    --> type = "file"
+    --> extension = "png"
+
+    --> name = "transcript123.png"
+    --> mode = "copy";
+
+    INST 1 -> :create_file
+    --> path = "testoutputs/conditiontest2/f7"
+    --> name = "transcript.png";
+
+    INST 2 -> :group
+    --> group_target = "testRefDirectory/f1"
+    --> path = "testoutputs/conditiontest2/f7"
+    --> mode = "copy";
+
+    INST 3 -> :rename
+    --> path = "testoutputs/conditiontest2/f7"
+    --> mode = "upper_case";
+
+
+    EXEC_COND_MAP 1 WITH_COND C_TargetPDF;
+    EXEC_COND_MAP 2 WITH_COND C_TargetPDF;
+    EXEC_COND_MAP 3 WITH_COND C_TargetPDF;
+
+END

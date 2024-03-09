@@ -1,0 +1,8 @@
+BEGIN
+
+INST create_some_files_inst -> :create_file
+--> path = "testoutputs/createtest3"
+--> name = "hello_file_10"
+--> count = "1";
+EXEC_INST create_some_files_inst;
+END
